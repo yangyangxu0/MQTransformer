@@ -30,11 +30,11 @@ Previous multi-task dense prediction studies developed complex pipelines such as
 MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.84 mIoU` on test), surpassing previous models by a large margin.
 
 ![MQTransformer](figures/overview.png)
-<p align="center"> An overview of MQTransformer. The MQTransformer represents multiple task-relevant queries to extract task-specific features from different tasks and performs joint multi-task learning. Here, we show an example of task-specific policy learned using our method. Note that the encoder (aqua) and decoder (mauve) are shared in our model. The number of task queries depends on the number of tasks. There are $T$ tasks. The task query first generates uniform initialization weights and then applies these task queries to encode from the corresponding task-specific feature in the shared encoder.</p>
+<p align="center">Fig.1. An overview of MQTransformer. The MQTransformer represents multiple task-relevant queries to extract task-specific features from different tasks and performs joint multi-task learning. Here, we show an example of task-specific policy learned using our method. Note that the encoder (aqua) and decoder (mauve) are shared in our model. The number of task queries depends on the number of tasks. There are $T$ tasks. The task query first generates uniform initialization weights and then applies these task queries to encode from the corresponding task-specific feature in the shared encoder.</p>
 
 
 ![MQTransformer](figures/encoder-decoder.png)
-<p align="center">Illustration of the Multi-Query Transformer (MQTransformer)</p>
+<p align="center">Fig.2. Illustration of the Multi-Query Transformer (MQTransformer)</p>
 
 ## Main Results on ImageNet with Pretrained Models
 
