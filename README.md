@@ -28,7 +28,7 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
 ## Main Results on ImageNet with Pretrained Models
 
-**DeMT on NYUD-v2 dataset**
+**MQTransformer on NYUD-v2 dataset**
 
 | model|backbone|#Params| GFLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
@@ -38,7 +38,7 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
 
 
-**DeMT on PASCAL-Contex dataset**
+**MQTransformer on PASCAL-Contex dataset**
 
 | model | backbone |  SemSeg | PartSeg | Sal | Normal| Boundary| 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -48,7 +48,7 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
        
  
-## Citing DeMT multi-task method
+## Citing MQTransformer multi-task method
 
 ```
 @inproceedings{2022MQTransformer,
