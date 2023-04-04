@@ -16,12 +16,9 @@ def get_backbone(model_backbone,
     elif model_backbone == 'HRNet48':
         backbone = backbones.hrnetv2p_w48(pretrained=pretrained)
         idx_to_planes = {0: 48, 1: 96, 2: 192, 3: 384}
-    elif model_backbone == 'Swin-B':
+    elif model_backbone == 'Swin-L':
         backbone = backbones.swin_b(pretrained=pretrained)
-        idx_to_planes = {0: 128, 1: 256, 2: 512, 3: 1024}
-    elif model_backbone == 'Swin-S':
-        backbone = backbones.swin_s(pretrained=pretrained)
-        idx_to_planes = {0: 96, 1: 192, 2: 384, 3: 768}
+        idx_to_planes = {0: 192, 1: 384, 2: 768, 3: 1536}
     elif model_backbone == 'Swin-T':
         backbone = backbones.swin_t(pretrained=pretrained)
         idx_to_planes = {0: 96, 1: 192, 2: 384, 3: 768}
@@ -42,9 +39,9 @@ def get_head(head_name,
     in_index = [int(i) for i in in_index.split(',')]
     in_index = in_index[0] if len(in_index) == 1 else in_index
 
-    if head_name == 'DemtHead':
-        from .heads.demt_head import DemtHead
-        partial_head = partial(DemtHead)
+    if head_name == 'MQFormerHead':
+        from .heads.mqformer_head import MQFormerHead
+        partial_head = partial(MQFormerHead)
 
     elif 'RelationalContextHead' in head_name:
         from .heads.relationalcontext import RelationalContextHead
