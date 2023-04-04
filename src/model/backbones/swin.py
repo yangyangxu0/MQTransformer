@@ -9,8 +9,7 @@ from torch.nn.modules.utils import _pair as to_2tuple
 
 
 model_urls = {
-    "swin_b": "https://download.openmmlab.com/mmsegmentation/v0.5/swin/upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_22K/upernet_swin_base_patch4_window7_512x512_160k_ade20k_pretrain_224x224_22K_20210526_211650-762e2178.pth",
-    "swin_s": "https://download.openmmlab.com/mmsegmentation/v0.5/swin/upernet_swin_small_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K/upernet_swin_small_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K_20210526_192015-ee2fff1c.pth",
+    "swin_l": "https://download.openmmlab.com/mmsegmentation/v0.5/swin/upernet_swin_large_patch4_window12_512x512_pretrain_384x384_22K_160k_ade20k/upernet_swin_large_patch4_window12_512x512_pretrain_384x384_22K_160k_ade20k_20220318_091743-9ba68901.pth",
     "swin_t": "https://download.openmmlab.com/mmsegmentation/v0.5/swin/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K/upernet_swin_tiny_patch4_window7_512x512_160k_ade20k_pretrain_224x224_1K_20210531_112542-e380ad3e.pth"
 
 }
@@ -949,16 +948,15 @@ class SwinTransformer(nn.Module):
 
         return outs
 
-
-
-def swin_b(pretrained: bool = False, progress: bool = True):
+def swin_l(pretrained: bool = False, progress: bool = True):
     my_swin = SwinTransformer(
-        embed_dims=128,
+        embed_dims=192,
         depths=(2, 2, 18, 2),
-        num_heads=(4, 8, 16, 32)
+        num_heads=(6, 12, 24, 48),
+        window_size=12
     )
     if pretrained:
-        state_dict = torch.hub.load_state_dict_from_url(model_urls['swin_b'], progress=progress)
+        state_dict = torch.hub.load_state_dict_from_url(model_urls['swin_l'], progress=progress)
         if 'state_dict' in state_dict:
             state_dict = state_dict['state_dict']
 
@@ -972,53 +970,10 @@ def swin_b(pretrained: bool = False, progress: bool = True):
     return my_swin
 
 
-def swin_s(pretrained: bool = False, progress: bool = True):
-    my_swin = SwinTransformer(
-        embed_dims=96,
-        depths=(2, 2, 18, 2),
-        num_heads=(3, 6, 12, 24)
-    )
-    if pretrained:
-        state_dict = torch.hub.load_state_dict_from_url(model_urls['swin_s'], progress=progress)
-        if 'state_dict' in state_dict:
-            state_dict = state_dict['state_dict']
-
-        if list(state_dict.keys())[0].startswith('backbone.'):
-            state_dict_new = OrderedDict()
-            for k, v in state_dict.items():
-                if k.startswith('backbone.'):
-                    state_dict_new[k[9:]] = v
-            state_dict = state_dict_new
-        my_swin.load_state_dict(state_dict, strict=False) #strict=True
-    return my_swin
-
-
-def swin_t(pretrained: bool = False, progress: bool = True):
-    my_swin = SwinTransformer(
-        embed_dims=96,
-        depths=(2, 2, 6, 2),
-        num_heads=(3, 6, 12, 24)
-    )
-    if pretrained:
-        state_dict = torch.hub.load_state_dict_from_url(model_urls['swin_t'], progress=progress)
-        if 'state_dict' in state_dict:
-            state_dict = state_dict['state_dict']
-
-        if list(state_dict.keys())[0].startswith('backbone.'):
-            state_dict_new = OrderedDict()
-            for k, v in state_dict.items():
-                if k.startswith('backbone.'):
-                    state_dict_new[k[9:]] = v
-            state_dict = state_dict_new
-        my_swin.load_state_dict(state_dict, strict=False) #strict=True
-    return my_swin
-
-
-
 if __name__ == '__main__':
-    model = swin_b(pretrained=True)
+    model = swin_l(pretrained=True)
     print(model)
-    img = torch.rand((2, 3, 224, 224))
+    img = torch.rand((2, 3, 384, 384))
     feat = model(img)
     for item in feat:
         print(item.shape)
