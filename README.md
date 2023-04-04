@@ -32,7 +32,8 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 ![MQTransformer](figures/overview.png)
 
 **Illustration of the Multi-Query Transformer (MQTransformer) **
-![MQTransformer](figures/overview.png)
+
+![MQTransformer](figures/encoder-decoder.png)
 
 ## Main Results on ImageNet with Pretrained Models
 
