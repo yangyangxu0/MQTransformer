@@ -1,25 +1,15 @@
 # MQTransformer
 
-
 This repo is the official implementation of ["MQTransformer"](https://arxiv.org/abs/2205.14354) as well as the follow-ups. It currently includes code and models for the following tasks:
 
 
-
 ## Updates
-
-
-***02/07/2023***
-
-`News`: 
-
-1. The Thirty-Seventh Conference on Artificial Intelligence (AAAI2023) will be held in Washington, DC, USA., from February 7-14, 2023.
-
 
 ***04/04/2023***
 
 `News`: 
 
-1. We release the MQTransformer code. 
+1. We release the MQTransformer code and model. 
 
 
 ## Introduction
