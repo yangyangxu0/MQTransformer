@@ -42,8 +42,8 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
 | model|backbone|#params| FLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
-| InvPT | Swin-L |   -M   |  -G   | 51.76 |0.5020 | 19.39 | 77.6 | [Google Drive]() | [log]()|
-| InvPT | ViT-L | 402.1M | 555.57G| 53.56 |0.5183 | 19.04 | 78.1 | [Google Drive]() | [log]() |
+| InvPT | Swin-L |   -M   |  -G   | 51.76 |0.5020 | 19.39 | 77.6 |- | -|
+| InvPT | ViT-L | 402.1M | 555.57G| 53.56 |0.5183 | 19.04 | 78.1 |-| [log](-) |
 | DeMT | Swin-L | 204.3M | 265.25G| 56.94 |0.5007 | 19.14 | 78.8 | [Google Drive]() | [log]() |
 
 
