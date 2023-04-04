@@ -40,11 +40,11 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
 **DeMT on NYUD-v2 dataset**
 
-| model|backbone|#params| FLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
+| model|backbone|#Params| GFLOPs | SemSeg| Depth | Noemal|Boundary| model checkpopint | log |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
 | InvPT | Swin-L |   -M   |  -G   | 51.76 |0.5020 | 19.39 | 77.6 |- | -|
-| InvPT | ViT-L | 402.1M | 555.57G| 53.56 |0.5183 | 19.04 | 78.1 |-| [log](-) |
-| DeMT | Swin-L | 204.3M | 265.25G| 56.94 |0.5007 | 19.14 | 78.8 | [Google Drive]() | [log]() |
+| InvPT | ViT-L | 402.1M | 555.57G| 53.56 |0.5183 | 19.04 | 78.1 |- | -|
+| MQTransformer | Swin-L | 204.3M | 265.25G| 56.94 |0.5007 | 19.14 | 78.8 | [Google Drive]() | [log]() |
 
 
 
@@ -52,9 +52,9 @@ MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (`54.
 
 | model | backbone |  SemSeg | PartSeg | Sal | Normal| Boundary| 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| DeMT |ViTAEv2-S| 69.10 | 58.23 | 83.51| 13.73 | 71.30 |
-| DeMT | Swin-T  | 68.24 | 57.05 | 83.40| 14.56 | 71.10 |
-| DeMT | Swin-S  | 71.25 | 60.11 | 84.05 | 14.74 | 71.80| 
+|MQTransformer |ViTAEv2-S| 69.10 | 58.23 | 83.51| 13.73 | 71.30 |
+|MQTransformer | Swin-T  | 68.24 | 57.05 | 83.40| 14.56 | 71.10 |
+|MQTransformer | Swin-S  | 71.25 | 60.11 | 84.05 | 14.74 | 71.80| 
 
        
  
