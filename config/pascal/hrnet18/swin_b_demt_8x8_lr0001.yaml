@@ -6,7 +6,7 @@ datamodule:
 
 model:
   model_backbone: Swin-B
-  model_head: DemtHead
+  model_head: MQFormer
   in_index: 0,1,2,3
   iterations: 40000
   lr: 0.001
