@@ -17,7 +17,7 @@ def get_backbone(model_backbone,
         backbone = backbones.hrnetv2p_w48(pretrained=pretrained)
         idx_to_planes = {0: 48, 1: 96, 2: 192, 3: 384}
     elif model_backbone == 'Swin-L':
-        backbone = backbones.swin_b(pretrained=pretrained)
+        backbone = backbones.swin_l(pretrained=pretrained)
         idx_to_planes = {0: 192, 1: 384, 2: 768, 3: 1536}
     elif model_backbone == 'Swin-T':
         backbone = backbones.swin_t(pretrained=pretrained)
