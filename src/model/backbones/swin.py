@@ -952,8 +952,7 @@ def swin_l(pretrained: bool = False, progress: bool = True):
     my_swin = SwinTransformer(
         embed_dims=192,
         depths=(2, 2, 18, 2),
-        num_heads=(6, 12, 24, 48),
-        window_size=12
+        num_heads=(6, 12, 24, 48)
     )
     if pretrained:
         state_dict = torch.hub.load_state_dict_from_url(model_urls['swin_l'], progress=progress)
