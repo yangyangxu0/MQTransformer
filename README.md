@@ -34,7 +34,7 @@ Our MQTransformer achieves strong performance on NYUD-v2 semantic segmentation (
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |:---: |:---: |
 | InvPT         | Swin-L |   -M   |  -G    | 51.76 |0.5020 | 19.39 | 77.6 |- | -|
 | InvPT         | ViT-L  | 402.1M | 555.57G| 53.56 |0.5183 | 19.04 | 78.1 |- | -|
-| MQTransformer | Swin-L | 204.3M | 365.25G| 54.84 |0.5325 | 19.67 | 78.20| [Google Drive](https://drive.google.com/file/d/1ujNkpLYB9TuHe1J0QbWTeC2iDks3MiFv/view?usp=share_link) | [log](https://drive.google.com/file/d/1ujNkpLYB9TuHe1J0QbWTeC2iDks3MiFv/view?usp=share_link) |
+| MQTransformer | Swin-L | 204.3M | 365.25G| 54.84 |0.5325 | 19.67 | 78.20| [Google Drive](https://drive.google.com/file/d/1ujNkpLYB9TuHe1J0QbWTeC2iDks3MiFv/view?usp=share_link) | [log](https://drive.google.com/file/d/1s1UBcu7CesLZ9_22yCYX4mYOTku4fuXz/view?usp=share_link) |
 
 
 
