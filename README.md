@@ -1,6 +1,6 @@
 # MQTransformer
 
-This repo is the official implementation of ["MQTransformer"](https://arxiv.org/abs/2205.14354) as well as the follow-ups. It currently includes code and models for the following tasks:
+This repo is the official implementation of ["MQTransformer"](https://arxiv.org/pdf/2205.14354.pdf) as well as the follow-ups. It currently includes code and models for the following tasks:
 
 
 ## Updates
